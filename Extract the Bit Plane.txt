@@ -1,0 +1,20 @@
+I = imread('bhupen.jpg');
+a = rgb2gray(I);
+for(i=1:8)
+biti=bitget(a,i);
+subplot(2,4,i);
+imshow(biti,[]);
+end
+figure;
+b=zeros(size(a));
+b=bitset(b,8,bitget(a,8));
+b=bitset(b,7,bitget(a,7));
+b=bitset(b,6,bitget(a,6));
+b=bitset(b,5,bitget(a,5));
+b=uint8(b);
+subplot(1,2,1);
+imshow(a);
+title("Original Image");
+subplot(1,2,2);
+imshow(b);
+title("Reconstructed Image");

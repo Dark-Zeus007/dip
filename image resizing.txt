@@ -1,0 +1,17 @@
+I = imread('gray.jpg');
+J = imresize(I,2); 
+K = imresize(I,2, 'nearest'); 
+L = imresize(I,2, 'bilinear'); 
+M = imresize(I,2, 'bicubic'); 
+subplot(3,2,1); imshow(I); 
+title('Original Image'); 
+subplot(3,2,2); imshow(J); 
+title('Default resize'); 
+subplot(3,2,3); imshow(K); 
+title('nearest'); 
+subplot(3,2,4); 
+imshow(L); 
+title('bilinear'); 
+subplot(3,2,5); 
+imshow(M); 
+title('bicubic');

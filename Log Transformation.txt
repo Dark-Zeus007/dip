@@ -1,0 +1,18 @@
+I = imread('bhupen.jpg');
+J = rgb2gray(I);
+J2 = im2double(J);
+K = 1*log(1+J2);
+L = 2*log(1+J2);
+M = 5*log(1+J2);
+subplot(2,2,1);
+imshow(J2);
+title('Original Image');
+subplot(2,2,2);
+imshow(K);
+title('C = 1');
+subplot(2,2,3);
+imshow(L);
+title('C = 2');
+subplot(2,2,4);
+imshow(M);
+title('C = 5');

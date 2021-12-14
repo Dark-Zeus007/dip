@@ -1,0 +1,12 @@
+I = imread('gray.jpg');
+subplot(2,2,1);
+imshow(I); title('Original Image');
+sobel = edge(I, 'sobel','both');
+subplot(2,2,2);
+imshow(sobel); title('Sobel Detection');
+robert = edge(I, 'roberts');
+subplot(2,2,3);
+imshow(robert); title('Robert Detection');
+prewitt = edge(I, 'prewitt');
+subplot(2,2,4);
+imshow(prewitt); title('Prewitt Detection');

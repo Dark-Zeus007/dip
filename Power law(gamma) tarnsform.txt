@@ -1,0 +1,16 @@
+I = imread('bhupen.jpg');
+K = imadjust(I, [], [], 0.5);
+L = imadjust(I, [], [], 1.5);
+M = imadjust(I, [], [], 3);
+subplot(2,2,1);
+imshow(I);
+title('Original Image');
+subplot(2,2,2);
+imshow(K);
+title('Gamma = 0.5');
+subplot(2,2,3);
+imshow(L);
+title('Gamma = 1.5');
+subplot(2,2,4);
+imshow(M);
+title('Gamma = 3');
